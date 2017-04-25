@@ -1,11 +1,9 @@
-# Azure Microservicrs Meetup at April 19
+# Quick demo to deploy Kubernetes cluster, Deis Workflow and publich you first app on Azure
 
-PPT and scripts form Azure Microservicrs Meetup at April 19
+I have created this demo to showcase ASC+Kubernetes+Deis simple scenario at Moscow Azure Meetup, April 19
+https://github.com/evangelism/AzureMeetupApril19 
 
-## Presentations
-"Microservices in Azire.pdf" - PPT from the meetup about Microservices and Azure for it (Stas Pavlov)  
-"Azure Service Fabric.pdf" - PPT from the meetup about Azure Service Fabric  (Evgeny Grigorenko)  
-"Why DevOps Matters.pdf" - PPT from the meetup about DevOps (Vladimir Gusarov)  
+Here I forked the repo to continue to develop demos (and remove PPT :) )
 
 ## Kubernetes with ACS and Deis simple deployment scripts 
 **createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
