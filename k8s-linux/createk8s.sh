@@ -14,13 +14,15 @@ az group create --name "${AZURE_RG_NAME}" --location "${AZURE_DC_LOCATION}"
 
 # Create Azure Container Service with Kubernetes as orchestrator
 # 1 master and 3 agent
-# use SSH pub key from ~/.ssh/
+# will not use SSH pub key from ~/.ssh/ but generate new one
+# to prevent possible probelms with encripted keys (demo purposes)
 az acs create --resource-group="${AZURE_RG_NAME}" \
   --location="${AZURE_DC_LOCATION}" \
   --orchestrator-type=kubernetes \
   --master-count=1 --agent-count=3 \
   --agent-vm-size="Standard_D2_v2" \
   --admin-username="stask8sadmin" \
+  --generate-ssh-keys \
   --name="${AZURE_SERVICE_NAME}" \
   --dns-prefix="${AZURE_DNS_PREFIX}"
 
