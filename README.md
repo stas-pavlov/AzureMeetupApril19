@@ -100,10 +100,10 @@ To test Deis installation you can use the follwing guides:
 For Applications - https://deis.com/docs/workflow/quickstart/deploy-an-app/  
 For Containers - https://deis.com/docs/workflow/applications/using-dockerfiles/
 
-Or you can use prepared **testdeis.sh** script. 
+Or you can use prepared **testdeis-app.sh** script. 
 Don't forgert to mark the scripts as executable:
 ```bash
-sudo chmod +x testdeis.sh
+sudo chmod +x testdeis-app.sh
 ```
 After the script execution **my-first-deis-app** was created. You can check it by using the following command:
 ```bash
