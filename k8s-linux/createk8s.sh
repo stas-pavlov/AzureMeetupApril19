@@ -13,13 +13,13 @@ export AZURE_SA_NAME=stask8sdeisstorage
 az group create --name "${AZURE_RG_NAME}" --location "${AZURE_DC_LOCATION}"
 
 # Create Azure Container Service with Kubernetes as orchestrator
-# 1 master and 3 agent
-# will not use SSH pub key from ~/.ssh/ but generate new one
-# to prevent possible probelms with encripted keys (demo purposes)
+# 1 master and 2 agent
+# will use SSH pub key from ~/.ssh/ if exists and
+# generate keys if doesn't'
 az acs create --resource-group="${AZURE_RG_NAME}" \
   --location="${AZURE_DC_LOCATION}" \
   --orchestrator-type=kubernetes \
-  --master-count=1 --agent-count=3 \
+  --master-count=1 --agent-count=2 \
   --agent-vm-size="Standard_D2_v2" \
   --admin-username="stask8sadmin" \
   --generate-ssh-keys \

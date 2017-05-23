@@ -1,11 +1,11 @@
 # Azure Resource Group name
-export AZURE_RG_NAME=stas-k8s-windows-rg			 
+export AZURE_RG_NAME=stas-k8s-win-rg			 
 # Azure DC Location
 export AZURE_DC_LOCATION=southcentralus		
 # Azure Container Service name
-export AZURE_SERVICE_NAME=stas-k8s-windows-acs		
+export AZURE_SERVICE_NAME=stas-k8s-win-acs		
 # Azure DNS Prefix for Azure Container Service
-export AZURE_DNS_PREFIX=stas-k8s-windows			
+export AZURE_DNS_PREFIX=stas-k8s-win			
 # Azure Storage Account name for DEIS usage
 #export AZURE_SA_NAME=stask8sdeisstorage		
 
@@ -13,12 +13,12 @@ export AZURE_DNS_PREFIX=stas-k8s-windows
 az group create --name "${AZURE_RG_NAME}" --location "${AZURE_DC_LOCATION}"
 
 # Create Azure Container Service with Kubernetes as orchestrator
-# 1 master and 3 agent
+# 1 master and 2 agent
 # use SSH pub key from ~/.ssh/
 az acs create --resource-group="${AZURE_RG_NAME}" \
   --location="${AZURE_DC_LOCATION}" \
   --orchestrator-type=kubernetes \
-  --master-count=1 --agent-count=3 \
+  --master-count=1 --agent-count=2 \
   --agent-vm-size="Standard_D2_v2" \
   --admin-username="stask8sadmin" \
   --admin-password="StrongestEverPasswordForK8SWindowsAzure2017!" \
