@@ -24,5 +24,5 @@ export AZURE_SA_KEY=`az storage account keys list -n $AZURE_SA_NAME -g $AZURE_RG
 # Install Deis in Kubernetes cluster to deis namespace
 helm install deis/workflow --namespace=deis --set global.storage=azure,azure.accountname=$AZURE_SA_NAME,azure.accountkey=$AZURE_SA_KEY,azure.registry_container=registry,azure.database_container=database,azure.builder_container=builder
 
-# Check that Desi pods starting at Kubernetes cluster
+# Check that Desi pods are starting at Kubernetes cluster
 kubectl --namespace=deis get pods
