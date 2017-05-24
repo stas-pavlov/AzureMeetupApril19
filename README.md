@@ -5,6 +5,9 @@ https://github.com/evangelism/AzureMeetupApril19
 
 Here I forked the repo to continue to develop demos (and remove PPT :) )
 
+**WARNING!** If you use Bash for Windows for this lab, to successfully connect to Kubernetes cluster you should use SSH keys with no password.
+For normal Linux, all works fine, I expect the same porblems for MacOS. Seamless way to test this is to use a bash console integrated into the Azure portal.
+
 ## Kubernetes with ACS and Deis simple deployment scripts 
 **createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
 **createdeis.sh** - bash script with parameters to create Deis Workflow on created Kuberntetes cluster (use the same prameters as **createk8s.sh**)
