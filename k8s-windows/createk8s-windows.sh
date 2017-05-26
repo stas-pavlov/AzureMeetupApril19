@@ -7,6 +7,7 @@ export AZURE_SERVICE_NAME=stas-k8s-win-acs
 # Azure DNS Prefix for Azure Container Service
 export AZURE_DNS_PREFIX=stas-k8s-win			
 # Admin password for Windows K8S servers 
+
 export AZURE_WINADMIN_PWD=StrongestEverPasswordForK8SWindowsAzure2017!	
 
 # Create Azure Resource Group
@@ -23,8 +24,7 @@ az acs create --resource-group="${AZURE_RG_NAME}" \
   --agent-vm-size="Standard_D2_v2" \
   --name="${AZURE_SERVICE_NAME}" \
   --dns-prefix="${AZURE_DNS_PREFIX}" \
-  --windows \
-  --admin-username="stask8sadmin" \
+  --windows --admin-username="stask8sadmin" \
   --admin-password="${AZURE_WINADMIN_PWD}"
   
 
