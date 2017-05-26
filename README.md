@@ -1,6 +1,6 @@
-# Quick demo to deploy Kubernetes cluster, Deis Workflow and publich you first app on Azure
+# Demos to deploy Kubernetes cluster, Deis Workflow and publich your first Deis app at Azure 
 
-I have created this demo to showcase ASC+Kubernetes+Deis simple scenario at Moscow Azure Meetup, April 19
+I have created this demo to showcase ASC+Kubernetes+Deis simple scenarios at Moscow Azure Meetup, April 19
 https://github.com/evangelism/AzureMeetupApril19 
 
 Here I forked the repo to continue to develop demos (and remove PPT :) )
@@ -8,9 +8,9 @@ Here I forked the repo to continue to develop demos (and remove PPT :) )
 **WARNING!** If you use Bash for Windows for this lab, to successfully connect to Kubernetes cluster you should use SSH keys with no password.
 For normal Linux, all works fine, I expect the same porblems for MacOS. Seamless way to test this is to use a bash console integrated into the Azure portal.
 
-## Kubernetes with ACS and Deis simple deployment scripts 
-**createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
-**createdeis.sh** - bash script with parameters to create Deis Workflow on created Kuberntetes cluster (use the same prameters as **createk8s.sh**)
+## Kubernetes with ACS and Deis simple deployment scripts (Linux Agents)
+**k8-linux/createk8s.sh** - bash script with parameters to create Kubertentes cluster at Azure Container Services  
+**k8-linux/createdeis.sh** - bash script with parameters to create Deis Workflow on created Kuberntetes cluster (use the same prameters as **createk8s.sh**)
 
 Change the following parameters to use for your test:
 
@@ -103,7 +103,7 @@ To test Deis installation you can use the follwing guides:
 For Applications - https://deis.com/docs/workflow/quickstart/deploy-an-app/  
 For Containers - https://deis.com/docs/workflow/applications/using-dockerfiles/
 
-Or you can use prepared **testdeis-app.sh** script. 
+Or you can use prepared **k8-linux/testdeis-app.sh** script. 
 Don't forgert to mark the scripts as executable:
 ```bash
 sudo chmod +x testdeis-app.sh

@@ -21,11 +21,12 @@ az acs create --resource-group="${AZURE_RG_NAME}" \
   --orchestrator-type=kubernetes \
   --master-count=1 --agent-count=2 \
   --agent-vm-size="Standard_D2_v2" \
-  --admin-username="stask8sadmin" \
-  --admin-password="${AZURE_WINADMIN_PWD}" \
   --name="${AZURE_SERVICE_NAME}" \
-  --dns-prefix="${AZURE_DNS_PREFIX}"
-  --windows
+  --dns-prefix="${AZURE_DNS_PREFIX}" \
+  --windows \
+  --admin-username="stask8sadmin" \
+  --admin-password="${AZURE_WINADMIN_PWD}"
+  
 
 # Downoad .kube configuration from created Kubernetes cluster to work with kubectl 
 az acs kubernetes get-credentials --resource-group=$AZURE_RG_NAME --name=$AZURE_SERVICE_NAME
