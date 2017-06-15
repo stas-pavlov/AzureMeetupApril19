@@ -14,7 +14,7 @@
         "image": "microsoft/iis",
         "ports": [
           {
-            "containerPort": "80"
+            "containerPort": 80
           }
         ]
       }
