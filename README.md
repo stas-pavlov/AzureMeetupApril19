@@ -129,12 +129,12 @@ kubectl —namespace=deis get secrets
 
 For example
 <pre>
-kubectl —namespace=deis delete secrets builder-ssh-private-keys                                                                                                 
-kubectl —namespace=deis delete secrets database-creds                                                                                                               
-kubectl —namespace=deis delete secrets deis-workflow-manager                                                                                                        
-kubectl —namespace=deis delete secrets deploy-hook-key                                                                                                              
-kubectl —namespace=deis delete secrets django-secret-key                                                                                                            
-kubectl —namespace=deis delete secrets logger-redis-creds                                                                                                         
+kubectl —namespace=deis delete secrets builder-ssh-private-keys
+kubectl —namespace=deis delete secrets database-creds
+kubectl —namespace=deis delete secrets deis-workflow-manager
+kubectl —namespace=deis delete secrets deploy-hook-key
+kubectl —namespace=deis delete secrets django-secret-key
+kubectl —namespace=deis delete secrets logger-redis-creds
 </pre>
 
 Then re-check Azure storage naming and re-deploy deis.
