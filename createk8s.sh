@@ -26,6 +26,8 @@ az acs create --resource-group="${AZURE_RG_NAME}" \
   --name="${AZURE_SERVICE_NAME}" \
   --dns-prefix="${AZURE_DNS_PREFIX}"
 
+  read  -n 1 -p "Press any key to continue..."
+
 # Downoad .kube configuration from created Kubernetes cluster to work with kubectl 
 az acs kubernetes get-credentials --resource-group=$AZURE_RG_NAME --name=$AZURE_SERVICE_NAME
 
